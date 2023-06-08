@@ -72,8 +72,41 @@ function multiplyArray(m) {
 
 //Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
 
+const numArgs = function(){
+    return arguments.length
+}
+console.log(numArgs(10, 20, 30, 40));
+
 //Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar'); would return the string "ratskcor".
+
+function reverseString(word){
+    let splitWord = word.split("");
+    let reverseWord = splitWord.reverse();
+    let joinWord = reverseWord.join("");
+
+    return joinWord;
+}
+console.log(reverseString("greatest"));
 
 //Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
 
+const longestStringInArray = function(strArray){
+    let longest = 0;
+    strArray.forEach(function(str) {
+        if(str.length > longest){
+            longest = str.length
+    }
+    
+    })
+    return longest;
+}
+
+console.log(longestStringInArray(["jack", "everest", "london", "excellent"]));
+
 //Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+
+function stringsLongerThan(longerthan3) {
+    
+}
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3));
+
